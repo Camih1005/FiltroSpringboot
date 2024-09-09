@@ -10,6 +10,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,6 +23,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "bicicletas")
 public class Bicicleta {
 
     @Id
@@ -30,11 +32,11 @@ public class Bicicleta {
 
 
     @ManyToOne
-    @JoinColumn(name = "modelo_id")
+    @JoinColumn(name = "modelo")
     private Modelo modelo;
 
     @ManyToOne
-    @JoinColumn(name = "marca_id")
+    @JoinColumn(name = "marca")
     private Marca marca;
     @NotBlank
     @Column

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CampusbiciApplication<campusbici>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.bicicampus.campusbici.CampusbiciApplication",
+            "projectName": "campusbici",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -18,20 +18,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("/modelo")
+@RequestMapping("/api/modelos")
 public class ModeloController {
 
      @Autowired
      private ModeloService modeloService;
 
-@PostMapping()
+@PostMapping("/post")
 public Modelo postMethodName(@RequestBody Modelo modelo) {
   
     
     return modeloService.crearModelo(modelo);
 }
 
-@GetMapping("/modelos")
+@GetMapping()
 public List<Modelo> getModelos() {
     return modeloService.getAllModelos();
 }
